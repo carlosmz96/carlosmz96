@@ -1,12 +1,9 @@
+
+
 <h1 align="center">
 	<img src="https://raw.githubusercontent.com/carlosmz96/carlosmz96/main/assets/banner.png" alt="banner" width="100%">
 	<a href="https://u8views.com/github/carlosmz96"><img src="https://u8views.com/api/v1/github/profiles/42782906/views/day-week-month-total-count.svg"></a>
 </h1>
-
-- 🌱 I’m currently learning **[Microservices](https://spring.io/microservices)**
-- 💬 Ask me about **Java, Angular... or anything [here](https://github.com/carlosmz96/carlosmz96/issues)**
-
-<br>
 
 <div align="center">
   <a href="carlosmz96esp@gmail.com">
@@ -17,7 +14,13 @@
   </a>
 </div>
 
-<hr>
+## 🧑🏻‍💻 About me
+
+Hi there 👋
+
+<p>I have a degree in computer engineering in information systems and I love programming.</p>
+<p>I have been a developer in the working world for 5 years and currently my goal is to continue learning, refine my strengths and correct the weaknesses. I am in favor of good code that is ordered, commented and, if possible, optimized.</p>
+<p>I welcome you to my development space!</p>
 
 ## 🛠️ Languages and Tools
 
@@ -28,4 +31,8 @@
   <img src="https://skillicons.dev/icons?i=html,css,sass,js,git,postman" />
 </p>
 
-<hr>
+## 🧱 What now?
+
+- 🌱 I’m currently learning **[Microservices](https://spring.io/microservices)**, **[Docker](https://www.docker.com/)** and **[Kubernetes](https://kubernetes.io/)**
+- 💬 Ask me about **Java, Angular... or anything [here](https://github.com/carlosmz96/carlosmz96/issues)**
+
