@@ -1,129 +1,64 @@
-<!-- assets/github-banner.svg -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
-  <title id="title">GitHub Profile Banner</title>
-  <desc id="desc">Banner pastel con nombre, rol y chips de tecnología.</desc>
+  <title id="title">Carlos Muñoz Arenas - Software Engineer</title>
+  <desc id="desc">Banner verde agua y negro para perfil GitHub con stack Spring Boot y Angular.</desc>
 
-  <!-- Fondo -->
+  <!-- ====== COLORES ====== -->
   <defs>
-    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f6f3ff"/>
-      <stop offset="50%" stop-color="#e9f7ff"/>
-      <stop offset="100%" stop-color="#eafaea"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1f24"/>       <!-- negro suave -->
+      <stop offset="100%" stop-color="#20c997"/>     <!-- verde agua -->
     </linearGradient>
-
-    <!-- Patrón de cuadrícula suave -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#000" opacity=".05"/>
-    </pattern>
-
-    <!-- Sombra suave reutilizable -->
-    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#20c997" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#20c997" stop-opacity=".25"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
       <feOffset dx="0" dy="4" result="offset"/>
-      <feComposite in="offset" in2="blur" operator="over" result="shadow"/>
-      <feColorMatrix in="shadow" type="matrix"
-        values="0 0 0 0 0
-                0 0 0 0 0
-                0 0 0 0 0
-                0 0 0 .25 0" />
-      <feBlend in="SourceGraphic" mode="normal"/>
+      <feMerge>
+        <feMergeNode in="offset"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
-
-    <!-- Chip -->
-    <symbol id="chip" viewBox="0 0 200 44" preserveAspectRatio="xMidYMid meet">
-      <rect x="0" y="0" width="200" height="44" rx="12" ry="12" fill="#ffffff" opacity=".85" />
-      <rect x="0" y="0" width="200" height="44" rx="12" ry="12" fill="url(#chipGrad)" opacity=".35"/>
-      <text x="100" y="28" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell"
-            font-size="16" text-anchor="middle" fill="#2a2a2a">Chip</text>
-    </symbol>
-
-    <linearGradient id="chipGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity=".8"/>
-      <stop offset="100%" stop-color="#f0f7ff" stop-opacity=".9"/>
-    </linearGradient>
-
-    <!-- Ondas decorativas -->
-    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#b8e1ff" stop-opacity=".45"/>
-      <stop offset="100%" stop-color="#c9ffd7" stop-opacity=".45"/>
-    </linearGradient>
   </defs>
 
-  <!-- Capa base -->
-  <rect width="1200" height="400" fill="url(#grad)"/>
-  <rect width="1200" height="400" fill="url(#grid)"/>
-
-  <!-- Ondas -->
+  <!-- ====== FONDO ====== -->
+  <rect width="1200" height="400" fill="url(#bg)"/>
   <path d="M0,300 C200,260 320,340 520,310 C760,270 880,360 1200,320 L1200,400 L0,400 Z" fill="url(#wave)"/>
-  <path d="M0,330 C220,300 360,360 560,340 C800,320 920,370 1200,350 L1200,400 L0,400 Z" fill="#ffffff" opacity=".35"/>
+  <path d="M0,330 C220,300 360,360 560,340 C800,320 920,370 1200,350 L1200,400 L0,400 Z" fill="#ffffff" opacity=".06"/>
 
-  <!-- Tarjeta de contenido -->
-  <g filter="url(#softShadow)">
-    <rect x="80" y="70" width="1040" height="260" rx="24" fill="#ffffff" opacity=".75"/>
+  <!-- ====== TARJETA ====== -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="70" width="1040" height="260" rx="24" fill="rgba(0,0,0,0.3)" stroke="#20c997" stroke-width="2"/>
   </g>
 
-  <!-- Nombre y rol (edita aquí) -->
-  <text x="120" y="150" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell"
-        font-size="44" font-weight="700" fill="#1f2937">TU NOMBRE</text>
+  <!-- ====== TEXTO ====== -->
+  <text x="120" y="160" font-family="Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif"
+        font-size="48" font-weight="700" fill="#20c997">Carlos Muñoz Arenas</text>
 
-  <text x="120" y="188" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell"
-        font-size="20" fill="#374151">Pedagoga · Psicopedagoga · Learning Experience Designer</text>
+  <text x="120" y="205" font-family="Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif"
+        font-size="26" fill="#e5f8f1">Software Engineer</text>
 
-  <!-- Links (edita URLs y textos) -->
-  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell"
-     font-size="16" fill="#111827">
-    <a xlink:href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">
-      <text x="120" y="222">  github.com/tuusuario</text>
-    </a>
-    <a xlink:href="https://www.linkedin.com/in/tuperfil" target="_blank" rel="noopener noreferrer">
-      <text x="120" y="246">  linkedin.com/in/tuperfil</text>
-    </a>
-    <a xlink:href="https://tu-portfolio.com" target="_blank" rel="noopener noreferrer">
-      <text x="120" y="270">🔗  tu-portfolio.com</text>
-    </a>
-  </g>
-
-  <!-- Chips de stack/skills (edita textos) -->
-  <g transform="translate(120,300)">
-    <!-- Chip 1 -->
-    <g transform="translate(0,0)">
-      <rect x="0" y="-28" width="150" height="40" rx="12" fill="#fff" opacity=".9"/>
-      <text x="75" y="-4" text-anchor="middle"
-            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell"
-            font-size="16" fill="#2a2a2a">Spring Boot</text>
-    </g>
-    <!-- Chip 2 -->
-    <g transform="translate(170,0)">
-      <rect x="0" y="-28" width="120" height="40" rx="12" fill="#fff" opacity=".9"/>
-      <text x="60" y="-4" text-anchor="middle"
-            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell"
-            font-size="16" fill="#2a2a2a">Angular</text>
-    </g>
-    <!-- Chip 3 -->
-    <g transform="translate(310,0)">
-      <rect x="0" y="-28" width="140" height="40" rx="12" fill="#fff" opacity=".9"/>
-      <text x="70" y="-4" text-anchor="middle"
-            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell"
-            font-size="16" fill="#2a2a2a">OpenHTMLtoPDF</text>
-    </g>
-    <!-- Chip 4 -->
-    <g transform="translate(470,0)">
-      <rect x="0" y="-28" width="110" height="40" rx="12" fill="#fff" opacity=".9"/>
-      <text x="55" y="-4" text-anchor="middle"
-            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell"
-            font-size="16" fill="#2a2a2a">Pedagogía</text>
-    </g>
-    <!-- Chip 5 -->
-    <g transform="translate(600,0)">
-      <rect x="0" y="-28" width="170" height="40" rx="12" fill="#fff" opacity=".9"/>
+  <!-- ====== STACK ====== -->
+  <g transform="translate(120,260)">
+    <!-- Chip Spring Boot -->
+    <g>
+      <rect x="0" y="-28" width="170" height="40" rx="12" fill="#20c997" opacity="0.2" stroke="#20c997" stroke-width="2"/>
       <text x="85" y="-4" text-anchor="middle"
-            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell"
-            font-size="16" fill="#2a2a2a">Learning Design</text>
+            font-family="Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif"
+            font-size="18" fill="#20c997">Spring Boot</text>
+    </g>
+    <!-- Chip Angular -->
+    <g transform="translate(190,0)">
+      <rect x="0" y="-28" width="140" height="40" rx="12" fill="#20c997" opacity="0.2" stroke="#20c997" stroke-width="2"/>
+      <text x="70" y="-4" text-anchor="middle"
+            font-family="Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif"
+            font-size="18" fill="#20c997">Angular</text>
     </g>
   </g>
 
-  <!-- Esquinas decorativas -->
-  <circle cx="1120" cy="80" r="18" fill="#c7f0ff" opacity=".8"/>
-  <circle cx="1080" cy="110" r="8" fill="#cfffd6" opacity=".8"/>
-  <circle cx="1060" cy="85" r="5" fill="#ffdff3" opacity=".8"/>
+  <!-- DETALLES DECORATIVOS -->
+  <circle cx="1080" cy="90" r="30" fill="#20c997" opacity=".2"/>
+  <circle cx="1030" cy="130" r="10" fill="#20c997" opacity=".4"/>
+  <circle cx="1100" cy="140" r="6" fill="#20c997" opacity=".5"/>
 </svg>
